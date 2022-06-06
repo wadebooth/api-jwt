@@ -1,0 +1,30 @@
+{
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "api"
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "functions": {
+    "source": "functions",
+    "runtime": "16"
+  },
+  "emulators": {
+    "hosting": {
+      "port": "5050",
+      "host": "localhost"
+    },
+    "functions": {
+      "port": "5080",
+      "host": "localhost"
+    }
+  }
+}
